@@ -13,7 +13,9 @@ class Program
         #region config
 
         endpointConfiguration.UsePersistence<LearningPersistence>();
-        endpointConfiguration.UseTransport(new LearningTransport()).RouteToEndpoint(typeof(MyMessage).Assembly, "Samples.SimpleSaga");
+        var transport = endpointConfiguration.UseTransport(new LearningTransport());
+        //comment out and it works
+        transport.RouteToEndpoint(typeof(MyMessage).Assembly, "Samples.SimpleSaga");
         endpointConfiguration.UseSerialization<SystemJsonSerializer>();
 
         #endregion
