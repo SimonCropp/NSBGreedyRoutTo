@@ -1,0 +1,11 @@
+*.png binary
+*.md     -text
+.editorconfig -text
+*.sln.DotSettings -text eol=crlf
+*.xlsx binary
+
+# Verify
+*.verified.csv text eol=lf working-tree-encoding=UTF-8
+*.verified.html text eol=lf working-tree-encoding=UTF-8
+*.verified.md text eol=lf working-tree-encoding=UTF-8
+*.verified.txt text eol=lf working-tree-encoding=UTF-8
